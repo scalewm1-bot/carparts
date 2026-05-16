@@ -1,4 +1,3 @@
-'use client';
 export default function CarpartsStoreUI() {
   const categories = [
     'Headlights',
@@ -14,25 +13,25 @@ export default function CarpartsStoreUI() {
       name: 'LED Headlight Assembly',
       price: '$249',
       image:
-        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1613214149922-f1809c99b414?q=80&w=1200&auto=format&fit=crop',
     },
     {
       name: 'Performance Brake Kit',
       price: '$399',
       image:
-        'https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1200&auto=format&fit=crop',
     },
     {
       name: 'Front Bumper Sport',
       price: '$599',
       image:
-        'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop',
     },
     {
       name: 'Suspension Coilovers',
       price: '$699',
       image:
-        'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1200&auto=format&fit=crop',
     },
   ];
 
@@ -47,9 +46,46 @@ export default function CarpartsStoreUI() {
             </h1>
           </div>
 
-          <nav className="hidden md:flex gap-8 text-gray-300 font-medium">
+          <nav className="hidden md:flex gap-8 text-gray-300 font-medium relative">
             <a href="#" className="hover:text-white transition">Home</a>
-            <a href="#categories" className="hover:text-white transition">Categories</a>
+            <div className="relative group">
+              <button className="hover:text-white transition flex items-center gap-2">
+                Categories
+                <span>▼</span>
+              </button>
+
+              <div className="absolute top-10 left-0 w-[700px] rounded-3xl border border-white/10 bg-[#0d132b]/95 backdrop-blur-2xl p-8 hidden group-hover:grid grid-cols-3 gap-8 shadow-2xl z-50">
+                <div>
+                  <h5 className="text-red-400 font-bold mb-4">Lighting</h5>
+                  <div className="space-y-3 text-gray-300">
+                    <p className="hover:text-white cursor-pointer">LED Headlights</p>
+                    <p className="hover:text-white cursor-pointer">Tail Lights</p>
+                    <p className="hover:text-white cursor-pointer">Fog Lights</p>
+                    <p className="hover:text-white cursor-pointer">Signal Lights</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 className="text-orange-400 font-bold mb-4">Exterior Parts</h5>
+                  <div className="space-y-3 text-gray-300">
+                    <p className="hover:text-white cursor-pointer">Front Bumpers</p>
+                    <p className="hover:text-white cursor-pointer">Mirrors</p>
+                    <p className="hover:text-white cursor-pointer">Grilles</p>
+                    <p className="hover:text-white cursor-pointer">Fenders</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 className="text-yellow-400 font-bold mb-4">Performance</h5>
+                  <div className="space-y-3 text-gray-300">
+                    <p className="hover:text-white cursor-pointer">Brake Kits</p>
+                    <p className="hover:text-white cursor-pointer">Suspension</p>
+                    <p className="hover:text-white cursor-pointer">Cold Air Intake</p>
+                    <p className="hover:text-white cursor-pointer">Exhaust Systems</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <a href="#products" className="hover:text-white transition">Products</a>
             <a href="#about" className="hover:text-white transition">About</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
@@ -74,11 +110,11 @@ export default function CarpartsStoreUI() {
 
         <div className="relative z-20 text-center max-w-5xl px-6">
           <p className="uppercase tracking-[6px] text-red-400 mb-5 font-semibold">
-            USA Automotive Marketplace
+            Premium USA Auto Parts Marketplace
           </p>
 
           <h2 className="text-6xl md:text-8xl font-black leading-tight mb-8">
-            Premium Auto Parts
+            OEM & Aftermarket Auto Parts
             <span className="block bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">
               For Every Build
             </span>
@@ -131,7 +167,7 @@ export default function CarpartsStoreUI() {
       <section id="categories" className="max-w-7xl mx-auto px-6 py-28">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h3 className="text-5xl font-black mb-4">Top Categories</h3>
+            <h3 className="text-5xl font-black mb-4">Shop By Category</h3>
             <p className="text-gray-400 text-lg">
               Explore our most popular automotive product categories.
             </p>
@@ -154,7 +190,7 @@ export default function CarpartsStoreUI() {
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Best Selling Products */}
       <section id="products" className="bg-[#070b18] py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-14">
